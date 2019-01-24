@@ -1,0 +1,90 @@
+{% extends 'bot/base.html' %}
+{% load static %}
+{% block head %}
+    <link rel="styleshhet" href="{% static 'bot/home1.css' %}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+    {% endblock %}
+{% block content %}
+    
+    <div class="head">
+            <p >a simple chatbot</p>
+        </div>
+    <div class="chatbox">
+        <div class="chatlogs">
+            <div class="chat user">
+                <div class="user-photo"></div>
+                     <div class="chat-message">user: <span id="user"></span></div>
+                 </div>
+        <div class="chat bot">
+            <div class="user-photo"></div>
+
+            <div class="chat-message">chatbot: <span id="chatbot"></span></div>
+        </div>
+        <div class="chat-form"><input id="input" type="text" placeholder="say anything..." autocomplete="off"/></div>
+        
+    </div>
+
+
+
+
+
+
+    <div id="chat_window"></div>
+    <form method="post" id="query_form">
+        <input type="text" id="id_question" name='question' placeholder="Enter your query" list="question-datalist">
+        <input type="submit" value="query">
+    </form>
+    <datalist id="question-datalist"></datalist>
+<script>
+    var chat_window = document.getElementById('chat_window');
+    var dataList = document.getElementById('question-datalist');
+    var input = document.getElementById('id_question');
+    // ajax call for load question
+
+    $(document).ready(function(e){
+        $.ajax({
+            type:"GET",
+            url:{% url 'bot-home' %},
+            success: function(data, textStatus, jqXHR){
+                // alert('questions loaded successfully');
+                for (i=0; i<data.questions.length; i++){
+                    console.log(data.questions[i]);
+                    // Create a new <option> element.
+                    var option = document.createElement('option');
+                    // Set the value using the item in the JSON array.
+                    option.value = data.questions[i];
+                    // Add the <option> element to the <datalist>.
+                    dataList.appendChild(option);
+                }
+                console.log(data);
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                alert('Error occurred! on loading question');
+            }
+        });
+    });
+
+    // ajax call for getting answer
+    $(document).on('submit', '#query_form', function(e){
+        e.preventDefault();
+        chat_window.innerHTML += '<p> you : '+$('#id_question').val()+'</p>';
+        $.ajax({
+            type:"POST",
+            url:{% url 'bot-home' %},
+            data:{
+                csrfmiddlewaretoken: '{{ csrf_token }}',
+                question: $('#id_question').val()
+            },
+            success: function(data, textStatus, jqXHR) {
+                // alert('Success!');
+                chat_window.innerHTML += '<p> bot : '+ data.answer + '</p>';
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                alert('Error occurred!');
+            }
+        });
+    });
+
+</script>
+{% endblock %}

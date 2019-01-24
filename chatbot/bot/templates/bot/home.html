@@ -1,0 +1,77 @@
+{% extends 'bot/base.html' %}
+{% block content %}
+    <div id="chat_window"></div>
+    <form method="post" id="query_form">
+        <input type="text" id="id_question" name='question' placeholder="Enter your query" list="question-datalist">
+        <input type="submit" value="query">
+    </form>
+    <datalist id="question-datalist"></datalist>
+<script>
+    var chat_window = document.getElementById('chat_window');
+    var dataList = document.getElementById('question-datalist');
+    var input = document.getElementById('id_question');
+    // ajax call for load question
+
+    $(document).ready(function(e){
+        $.ajax({
+            type:"GET",
+            url:{% url 'bot-home' %},
+            success: function(data, textStatus, jqXHR){
+                // alert('questions loaded successfully');
+                for (i=0; i<data.questions.length; i++){
+                    console.log(data.questions[i]);
+                    // Create a new <option> element.
+                    var option = document.createElement('option');
+                    // Set the value using the item in the JSON array.
+                    option.value = data.questions[i];
+                    // Add the <option> element to the <datalist>.
+                    dataList.appendChild(option);
+                }
+                console.log(data);
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                alert('Error occurred! on loading question');
+            }
+        });
+    });
+
+    // ajax call for getting answer
+    $(document).on('submit', '#query_form', function(e){
+        e.preventDefault();
+        chat_window.innerHTML += '<p> you : '+$('#id_question').val()+'</p>';
+        $.ajax({
+            type:"POST",
+            url:{% url 'bot-home' %},
+            data:{
+                csrfmiddlewaretoken: '{{ csrf_token }}',
+                question: $('#id_question').val()
+            },
+            success: function(data, textStatus, jqXHR) {
+                // alert('Success!');
+                chat_window.innerHTML += '<p> bot : '+ data.answer + '</p>';
+                // console.log(data);
+                // console.log(textStatus);
+                // console.log(jqXHR);
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                alert('Error occurred!');
+            }
+        });
+    });
+
+</script>
+{% endblock %}
+
+var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function(){
+            if (xmlhttp.status == 200){
+                chat_window.innerHTML += '<p> bot : '+xmlhttp.responseText+'</p>';
+            }
+            else if (xmlhttp.status == 400){
+                alert('There was an error 400');
+            }
+            else {
+                alert('other than 200 was returned');        
+            }
+        };
+        xml
