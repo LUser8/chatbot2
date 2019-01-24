@@ -1,5 +1,6 @@
-#!/Users/rupak/Desktop/Django_ChatBot_Project/venv/bin/python3.7
-
+#!/bin/sh
+'''exec' "/Volumes/Disk2/workspace/a.tiwari/ELIBOTS/Development/Web Development/s_p/chatbot2/venv/bin/python3.6" "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys

@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/rupak/Desktop/Django_ChatBot_Project/venv"
+VIRTUAL_ENV="/Volumes/Disk2/workspace/a.tiwari/ELIBOTS/Development/Web Development/s_p/chatbot2/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

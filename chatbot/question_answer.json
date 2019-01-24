@@ -1,0 +1,254 @@
+[
+  {
+    "question": "Which is not commonly used programming language for AI?",
+    "answer": "Perl language is not commonly used programming language for AI"
+  },
+  {
+    "question": "What does a production rule consist of?",
+    "answer": "The production rule comprises of a set of rule and a sequence of steps."
+  },
+  {
+    "question": "What is agent in artificial intelligence?",
+    "answer": "Anything perceives its environment by sensors and acts upon an environment by effectors are known as Agent. Agent includes Robots, Programs, and Humans etc."
+  },
+  {
+    "question": "Which property is considered as not a desirable property of a logical rule-based system?",
+    "answer": "“Attachment” is considered as not a desirable property of a logical rule based system."
+  },
+  {
+    "question": "What is a heuristic function?",
+    "answer": "A heuristic function ranks alternatives, in search algorithms, at each branching step based on the available information to decide which branch to follow."
+  },
+  {
+    "question": "What is the function of the third component of the planning system?",
+    "answer": "In a planning system, the function of the third component is to detect when a solution to problem has been found."
+  },
+  {
+    "question": "Mention the difference between breadth first search and best first search in artificial intelligence?",
+    "answer": "These are the two strategies which are quite similar. In best first search, we expand the nodes in accordance with the evaluation function. While, in breadth first search a node is expanded in accordance to the cost function of the parent node."
+  },
+  {
+    "question": "What are frames and scripts in “Artificial Intelligence”?",
+    "answer": "Frames are a variant of semantic networks which is one of the popular ways of presenting non-procedural knowledge in an expert system. A frame which is an artificial data structure is used to divide knowledge into substructure by representing “stereotyped situations’. Scripts are similar to frames, except the values that fill the slots must be ordered.  Scripts are used in natural language understanding systems to organize a knowledge base in terms of the situation that the system should understand."
+  },
+  {
+    "question": "For building a Bayes model how many terms are required?",
+    "answer": "For building a Bayes model in AI, three terms are required; they are one conditional probability and two unconditional probability."
+  },
+  {
+    "question": "Is NLP the same as Hypnosis?",
+    "answer": "When NLP was originated, they studied the father of Hypnotherapy, Milton Erickson so his communication style, attitudes and language patterns are integrated into NLP. NLP is not hypnosis though, there are many other influences and hypnotic language patterns are just one element."
+  },
+  {
+    "question": "To answer any query how the Bayesian network can be used?",
+    "answer": "If a Bayesian Network is a representative of the joint distribution, then by summing all the relevant joint entries, it can solve any query."
+  },
+  {
+    "question": "What combines inductive methods with the power of first order representations?",
+    "answer": "Inductive logic programming combines inductive methods with the power of first order representations."
+  },
+  {
+    "question": "In Inductive Logic Programming what needed to be satisfied?",
+    "answer": "The objective of an Inductive Logic Programming is to come up with a set of sentences for the hypothesis such that the entailment constraint is satisfied."
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  },
+  {
+    "question": "",
+    "answer": ""
+  }
+]

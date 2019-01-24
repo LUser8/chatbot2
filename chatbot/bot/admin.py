@@ -1,4 +1,5 @@
 from django.contrib import admin
-from .models import ChatAssistent
+from .models import ChatAssistant
 
-admin.site.register([ChatAssistent])
+# register the model with admin app
+admin.site.register([ChatAssistant])

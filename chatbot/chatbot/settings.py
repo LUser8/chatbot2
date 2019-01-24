@@ -25,7 +25,7 @@ SECRET_KEY = '3ce^$&!9*zuo*u12ut)t_br7)isoz+cvbebn8xrfqj9)crem6*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', '192.168.0.6']
+ALLOWED_HOSTS = ['*', '192.168.0.5']
 
 
 # Application definition
@@ -79,10 +79,30 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': "chatbot",
-        'HOST': '192.168.0.6',
+        'HOST': '0.0.0.0',
         'PORT': 27017,
         'ENFORCE_SCHEMA': True
-    }
+    },
+
+    # if using postgres database
+    # 'default': {
+    #     'NAME': 'chatbot',
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'HOST': '0.0.0.0',
+    #     'PORT': 5432,
+    #     'USER': 'postgres_user',
+    #     'PASSWORD': ''
+    # },
+
+    # if using mysql database
+    # 'default': {
+    #     'NAME': 'chatbot',
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'HOST': '0.0.0.0',
+    #     'PORT': 3306,
+    #     'USER': 'mysql_user',
+    #     'PASSWORD': ''
+    # },
 }
 
 

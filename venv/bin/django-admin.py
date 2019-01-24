@@ -1,4 +1,4 @@
-#!/Users/rupak/Desktop/Django_ChatBot_Project/venv/bin/python3.7
+#!/Volumes/Disk2/workspace/a.tiwari/ELIBOTS/Development/Web Development/s_p/chatbot2/venv/bin/python3.6
 from django.core import management
 
 if __name__ == "__main__":
